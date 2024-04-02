@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("krstevskiDarko/CI_CD-Project")
+       app = docker.build("krstevskiDarko/ci_cd-project")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'darko-dockerhub') {
